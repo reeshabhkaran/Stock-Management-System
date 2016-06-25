@@ -1,0 +1,263 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+.panel-pomegranate-header
+{
+	color: White !important;
+	background-color: #e74c3c !important;
+	border-color: #e74c3c !important;
+}
+
+.panel-pomegranate-border
+{
+	border-color: #e74c3c !important;
+}
+
+.panel-turquoise-header
+{
+	color: White !important;
+	background-color: #1abc9c !important;
+	border-color: #1abc9c !important;
+}
+
+.panel-turquoise-border
+{
+	border-color: #1abc9c !important;
+}
+
+.panel-belizehole-header
+{
+	color: White !important;
+	background-color: #2980b9 !important;
+	border-color: #2980b9 !important;
+}
+
+.panel-belizehole-border
+{
+	border-color: #2980b9 !important;
+}
+
+.panel-midnightblue-header
+{
+	color: White !important;
+	background-color: #2c3e50 !important;
+	border-color: #2c3e50 !important;
+}
+
+.panel-midnightblue-border
+{
+	border-color: #2c3e50 !important;
+}
+
+.panel-carrot-header
+{
+	color: White !important;
+	background-color: #e67e22 !important;
+	border-color: #e67e22 !important;
+}
+
+.panel-carrot-border
+{
+	border-color: #e67e22 !important;
+}
+
+.panel-amethyst-header
+{
+	color: White !important;
+	background-color: #9b59b6 !important;
+	border-color: #9b59b6 !important;
+}
+
+.panel-amethyst-border
+{
+	border-color: #9b59b6 !important;
+}
+
+.minHeightFirstRow
+{
+	min-height: 240px;
+	max-height: 240px;
+	overflow: auto;
+}
+
+.minHeightSecondRow
+{
+	min-height: 180px;
+	max-height: 180px;
+	overflow: auto;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li:hover > .ap, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > .ap, .page-sidebar .page-sidebar-menu > li:hover > .ap, .page-sidebar .page-sidebar-menu > li.open > .ap, .page-sidebar .page-sidebar-menu .apsub-menu
+{
+	background: #2980b9 !important;
+	color: #fff;
+}
+
+.paddingTopFormControls-8px
+{
+	padding-top: 8px;
+}
+
+.marginTopFormControls-15px
+{
+	margin-top: 15px;
+}
+
+.marginTopFormControls--15px
+{
+	margin-top: -15px;
+	margin-bottom: -15px;
+}
+
+.openActionsCustomRow {
+	 margin-right: 0px !important; 
+	 margin-left: 0px !important; 
+}
+
+/*=======================TEXT COLORS STARTS===================*/
+
+.text-midnight-blue
+{
+	color: #2c3e50 !important;
+}
+
+.text-green-sea
+{
+	color: #16a085;
+	font-size: x-large;
+}
+
+.text-belize-hole
+{
+	color: #2980b9;
+}
+
+.text-pomegranate
+{
+	color: #c0392b;
+}
+
+.text-white
+{
+	color: #fff;
+}
+
+/*=======================TEXT COLORS ENDS===================*/
+
+.tabPanelWidth
+{
+	width: 50%;
+	text-align: center;
+	font-size: small;
+}
+
+.panelIncidents .nav-tabs > li.active > a, .panelIncidents .nav-tabs > li.active > a:focus, .panelIncidents .nav-tabs > li.active > a:hover
+{
+	color: White !important;
+	cursor: default;
+	background-color: #e74c3c !important;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+}
+
+.panelOpenActions .nav-tabs > li.active > a, .panelOpenActions .nav-tabs > li.active > a:focus, .panelOpenActions .nav-tabs > li.active > a:hover
+{
+	color: White !important;
+	cursor: default;
+	background-color: #2980b9 !important;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+}
+
+.panelProcessInc .nav-tabs > li.active > a, .panelProcessInc .nav-tabs > li.active > a:focus, .panelProcessInc .nav-tabs > li.active > a:hover
+{
+	color: White !important;
+	cursor: default;
+	background-color: #2c3e50 !important;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+}
+
+.tabPanelBodyBorderPomegranate
+{
+	border: 1px solid #e74c3c;
+	padding: 5px;
+}
+
+.tabPanelBodyBorderBelizeHole
+{
+	border: 1px solid #2980b9;
+	padding: 5px;
+}
+
+.tabPanelBodyBorderMidnightBlue
+{
+	border-top: 1px solid #2c3e50;
+	padding: 5px;
+}
+
+.tile-belize-hole {
+	background-color: #2980b9 !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	height: 172px !important;
+	margin-top: 3px !important;
+}
+
+.tile-pumpkin {
+	background-color: #d35400 !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	height: 172px !important;
+	margin-top: 3px !important;
+}
+
+.tile-green-sea {
+	background-color: #16a085 !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	height: 172px !important;
+	margin-top: 3px !important;
+}
+
+.tile-wisteria {
+	background-color: #8e44ad !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	height: 172px !important;
+	margin-top: 3px !important;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+{
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+{
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+{
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+{
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+{
+
+}
