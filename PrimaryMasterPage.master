@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" CodeFile="PrimaryMasterPage.master.cs" Inherits="PrimaryMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-ico" href="images/favicon.ico" />
+    <title>SMS</title>
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/AdminLTE.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/skin-black.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap-select.min.css" />
+    <link href="Content/animate.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/PrimaryMasterPage.css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="Scripts/HTML5BackCompat.js"></script>
+     <script type="text/javascript" src="Scripts/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="stylesSection" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-black sidebar-mini sidebar-collapse" data-spy="scroll" data-target="#scrollspy"
+    style="height: 100%;">
+    <form id="mainForm" runat="server" autocomplete="off" enctype="multipart/form-data">
+    <ajax:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </ajax:ToolkitScriptManager>
+    <header class="main-header" style="background-color: rgb(34, 45, 50);">
+        <!-- Logo -->
+        <a href="Home.aspx" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini">
+                <asp:Image ID="Image1" ImageUrl="~/images/sms.png" runat="server" Width="50px" Height="50px"></asp:Image>
+            </span>
+            <!-- logo for regular state and mobile devices -->
+            <span style="color:blue;">
+                <asp:Image ID="Image2" ImageUrl="~/images/sms.png" runat="server" Width="50px" Height="50px"></asp:Image>
+            </span>
+        </a>
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle customToolTip" title='Click to Show/Hide Menu'
+            data-toggle="offcanvas" role="button"><span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar-inverse navbar-static-top" role="navigation">
+            <ul class="nav navbar-nav pull-right hidden-sm hidden-xs" style="text-decoration: none;
+                margin-right: 50px; margin-top: 10px;">
+            
+                <div class="btn-group">
+
+                    <button type="button" class="btn btn-default"    style="min-width: 210px;">
+                        <asp:Label ID="lblWelcomeText" runat="server" Text=""></asp:Label>                        
+                    </button>
+                  <asp:Label ID="Label1" runat="server" Text="Label" Visible="true"></asp:Label>
+                    <asp:Button ID="Button2" class="btn btn-twitter" runat="server" Text="Logout" OnClick="btn_logout"></asp:Button>
+
+          <%--          <ul class="dropdown-menu" role="menu" style="min-width: 210px;">
+                        <li>
+                            <div class="well text-center">
+                                <img alt="User Image" width="80px" height="80px" class="img img-thumbnail" src='<%="http://176.0.1.102/GIH001.ashx?pf=YY&cid="+"158883" %>' />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-1 text-primary">
+                                    <small>
+                                        <asp:Literal runat="server" Text="Emp ID"></asp:Literal>
+                                    </small>
+                                </div>
+                                <div class="col-md-6 text-left text-primary">
+                                  <%--  <%=Session[CommonConstants.SESSION_USER_ID].ToString() %>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-1 text-amethyst">
+                                    <small>
+                                        <asp:Literal ID="Literal1" runat="server" Text="Survey Status:"></asp:Literal></small>
+                                </div>
+                                <div class="col-md-6 text-left text-amethyst">
+                                    <small>Submitted</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-1 text-carrot">
+                                    <small>
+                                        <asp:Literal ID="Literal2" runat="server" Text="Submitted On:"></asp:Literal></small>
+                                </div>
+                                <div class="col-md-6 text-left text-carrot">
+                                    <small>20th Nov 2015</small>
+                                </div>
+                            </div>
+                        </li>
+                       <%--  <li class="divider"></li>
+                       <li>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-1 text-turquoise">
+                                    <small>
+                                        <asp:Literal runat="server" Text="Title 3"></asp:Literal>
+                                    </small>
+                                </div>
+                                <div class="col-md-6 text-left text-turquoise">
+                                    <small>Value 3</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <asp:Button ID="btnLogout" CssClass="btn btn-danger btn-block" runat="server" Text="Sign in as Another User"
+                                        OnClick="btnLogout_Click"></asp:Button>
+                                </div>
+                            </div>
+                        </li>
+                       <li class="divider"></li>--%>
+                       <%-- <li>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <a href="#" class="btn btn-primary btn-block">
+                                        <asp:Literal runat="server" Text="Edit Profile"></asp:Literal></a>
+                                </div>
+                            </div>
+                            <br />
+                        </li>
+                    </ul>--%>
+                </div>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="clearfix" style="background-color: #222D32;">
+    </div>
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar" id="scrollspy">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="header" style="color: #95a5a6;">MAIN NAVIGATION</li>
+                <li><a href="Home.aspx"><i class="fa fa-home"></i><span>Home</span> </a></li>
+                <li class="treeview MenuItem1"><a href="View.aspx"><i class="fa fa-sitemap"></i><span>View Stock</span> <i class="fa fa-angle-left pull-right"></i></a>
+                  <%--  <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Child Menu 1</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Child Menu 2</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Child Menu 3</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Child Menu 4</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Child Menu 5</a></li>
+                    </ul>--%>
+                </li>
+                <li class="treeview MenuItem2"><a href="Consume.aspx"><i class="fa fa-eye">
+                </i><span>Consume Item</span> <i class="fa fa-angle-left pull-right"></i></a>
+                 
+                </li>
+                
+                <li class="treeview MenuItem4"><a href="Add.aspx"><i class="fa fa-exclamation-circle">
+                </i><span>Add Item</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    
+                </li>
+                
+                
+                <li class="treeview MenuItem5"><a href="Contact.aspx"><i class="glyphicon glyphicon-log-in"></i><span>Contact Us</span>
+                </a></li>
+           
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="height: auto; background-color: White;">
+        <!-- Main content -->
+        <div class="content">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+    <div>
+        <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="Scripts/jquery.smooth-scroll.min.js"></script>
+        <script type="text/javascript" src="Scripts/modernizr.min.js"></script>
+        <script type="text/javascript" src="Scripts/app.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-notify.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+
+            //Page Load event for javascript.
+            function pageLoad(sender, args) {
+
+            };           
+        </script>
+        <asp:ContentPlaceHolder ID="scriptsSection" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

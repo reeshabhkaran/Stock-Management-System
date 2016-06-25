@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" CodeFile="MasterPageMinusAnyData.master.cs" Inherits="MasterPageMinusAnyData" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-ico" href="images/favicon.ico" />
+    <title>SMS | Login</title>
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/AdminLTE.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/skin-black.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap-datetimepicker.min.css" />
+    <link href="Content/animate.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Styles/PrimaryMasterPage.css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="Scripts/HTML5BackCompat.js"></script>
+     <script type="text/javascript" src="Scripts/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="stylesSection" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-black sidebar-mini" data-spy="scroll" data-target="#scrollspy">
+    <form id="mainForm" runat="server" autocomplete="off">
+    <ajax:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </ajax:ToolkitScriptManager>
+    <div class="navbar navbar-fixed-top" style="background-color: Black;">
+        <div class="page-header-inner">
+            <div class="page-logo">
+                <a id="aLogo" href="#" runat="server" style="text-decoration: none;">
+                    <label class="hidden-sm hidden-xs" style="color: White; font-size: larger; margin-left: 20px;
+                        font-weight: bolder; font-size: xx-large; cursor: pointer!important;">
+                        Stock Management System</label>
+                    <label class="hidden-lg hidden-md" style="color: White; font-size: larger; margin-top: 5px;">
+                        Stock Management System</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="page-container">
+        <div class="page-content">
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div>
+        <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="Scripts/jquery.smooth-scroll.min.js"></script>
+        <script type="text/javascript" src="Scripts/modernizr.min.js"></script>
+        <script src="Scripts/bootstrap-switch.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="Scripts/bootstrap-notify.js"></script>
+        <asp:ContentPlaceHolder ID="scriptsSection" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
